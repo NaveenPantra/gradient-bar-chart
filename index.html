@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>011 Gradient data viz</title>
+  </head>
+  <body>
+    <main>
+      <div class="legend">
+        <span
+          class="legend-color-notation"
+          style="background: var(--emails)"
+        ></span>
+        <p class="legend-notation-text">Emails</p>
+        <span
+          class="legend-color-notation"
+          style="background: var(--calls)"
+        ></span>
+        <p class="legend-notation-text">Calls</p>
+        <span
+          class="legend-color-notation"
+          style="background: var(--messages)"
+        ></span>
+        <p class="legend-notation-text">Messages</p>
+      </div>
+      <div class="x-axis-scale">
+        <span>30</span><span>20</span><span>10</span><span>0</span>
+      </div>
+      <div class="bar bar-1"></div>
+      <div class="bar bar-2"></div>
+      <div class="bar bar-3"></div>
+      <div class="bar bar-4"></div>
+      <div class="bar bar-5"></div>
+      <div class="bar bar-6"></div>
+      <div class="bar bar-7"></div>
+      <div class="bar bar-8"></div>
+      <div class="bar bar-9"></div>
+      <div class="bar bar-10"></div>
+      <div class="bar bar-11"></div>
+      <div class="bar bar-12"></div>
+      <div class="bottom-left-empty"></div>
+      <div class="y-axis-number y-axis-num-1">1-7<br />Aug</div>
+      <div class="y-axis-number y-axis-num-2">8-14<br />Aug</div>
+      <div class="y-axis-number y-axis-num-3">15-21<br />Aug</div>
+      <div class="y-axis-number y-axis-num-4">22-28<br />Aug</div>
+      <div class="y-axis-number y-axis-num-5">29-4<br />Au-Se</div>
+      <div class="y-axis-number y-axis-num-6">5-11<br />Sept</div>
+      <div class="y-axis-number y-axis-num-7">12-18<br />Sept</div>
+      <div class="y-axis-number y-axis-num-8">19-25<br />Sept</div>
+      <div class="y-axis-number y-axis-num-9">26-2<br />Se-Oc</div>
+      <div class="y-axis-number y-axis-num-10">3-9<br />Oct</div>
+      <div class="y-axis-number y-axis-num-11">10-16<br />Oct</div>
+      <div class="y-axis-number y-axis-num-12 cur-week">11-23<br />*Oct*</div>
+
+      <div class="tooltip bar-tooltip">
+        <p class="tt-st-dt">10<sup>th</sup> Sept - 17<sup>th</sup> Sept</p>
+        <span class="tt-dot tt-email-dot"></span>
+        <span class="tt-stat-title tt-emails-txt">Emails</span>
+        <span class="tt-stat-count tt-emails-stat-count">10</span>
+        <span class="tt-dot tt-calls-dot"></span>
+        <span class="tt-stat-title tt-calls-txt">Calls</span>
+        <span class="tt-stat-count tt-calls-stat-count">10</span>
+        <span class="tt-dot tt-messages-dot"></span>
+        <span class="tt-stat-title tt-messages-txt">Messages</span>
+        <span class="tt-stat-count tt-messages-stat-count">10</span>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

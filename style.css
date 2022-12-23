@@ -1,0 +1,380 @@
+* {
+  box-sizing: border-box;
+  --emails: #67d0fa;
+  --calls: #375ee5;
+  --messages: #b783fc;
+  --bar-bck: #e7ecf2;
+  --scale-num-color: #606060;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #ecf0f1;
+  font-family: monospace;
+  box-sizing: border-box;
+  line-height: 1.4;
+  color: #272933;
+
+  display: grid;
+  place-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  box-shadow: 0 0 14px 0 #22222224;
+  padding: 16px;
+  width: 675px;
+  height: 350px;
+  position: relative;
+
+  display: grid;
+  grid-template-rows: 32px 1fr 32px;
+  grid-template-columns: 16px repeat(12, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 8px;
+}
+
+.legend {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+}
+
+.legend-color-notation {
+  --w: 12px;
+  width: var(--w);
+  height: var(--w);
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.legend-notation-text {
+  margin-right: 16px;
+}
+
+.x-axis-scale {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: var(--scale-num-color);
+
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.bar {
+  background: var(--bar-bck);
+  cursor: context-menu;
+  opacity: 1;
+  transition: opacity 0.1s linear;
+}
+
+main:has(.bar:hover) .bar:not(:hover) {
+  /*opacity: 0.8;*/
+}
+
+/*.bar:hover ~ .bar:not(:hover) {*/
+/*  opacity: 0.8;*/
+/*}*/
+
+.bottom-left-empty {
+  grid-column: 1 / span 1;
+  grid-row: -2 / -1;
+}
+
+.y-axis-number {
+  justify-self: center;
+  text-align: center;
+  color: var(--scale-num-color);
+}
+
+.bar-1 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 10%,
+    var(--calls) 10%,
+    var(--calls) 50%,
+    var(--emails) 50%,
+    var(--emails) 95%,
+    #e7ecf2 0%
+  );
+}
+
+.bar-2 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 20%,
+    var(--calls) 20%,
+    var(--calls) 80%,
+    var(--emails) 80%,
+    var(--emails) 90%,
+    #e7ecf2 0%
+  );
+}
+
+.bar-3 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 40%,
+    var(--calls) 40%,
+    var(--calls) 50%,
+    var(--emails) 50%,
+    var(--emails) 70%,
+    #e7ecf2 0%
+  );
+}
+
+.bar-3 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 40%,
+    var(--calls) 40%,
+    var(--calls) 50%,
+    var(--emails) 50%,
+    var(--emails) 70%,
+    #e7ecf2 0%
+  );
+}
+
+.bar-4 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 10%,
+    var(--calls) 10%,
+    var(--calls) 20%,
+    var(--emails) 20%,
+    var(--emails) 40%,
+    var(--bar-bck) 0%
+  );
+}
+
+.bar-5 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 33.33%,
+    var(--calls) 33.33%,
+    var(--calls) 66.66%,
+    var(--emails) 66.66%,
+    var(--emails) 100%,
+    var(--bar-bck) 0%
+  );
+}
+
+.bar-6 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 5%,
+    var(--calls) 5%,
+    var(--calls) 20%,
+    var(--emails) 20%,
+    var(--emails) 90%,
+    var(--bar-bck) 0%
+  );
+}
+
+.bar-7 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 3%,
+    var(--calls) 3%,
+    var(--calls) 25%,
+    var(--bar-bck) 0%
+  );
+}
+
+.bar-8 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 70%,
+    var(--calls) 70%,
+    var(--calls) 75%,
+    var(--emails) 75%,
+    var(--emails) 90%,
+    var(--bar-bck) 0%
+  );
+}
+
+.bar-9 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 5%,
+    var(--calls) 5%,
+    var(--calls) 90%,
+    var(--emails) 90%,
+    var(--emails) 95%,
+    var(--bar-bck) 0%
+  );
+}
+
+.bar-10 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 20%,
+    var(--calls) 20%,
+    var(--calls) 80%,
+    var(--emails) 80%,
+    var(--emails) 85%,
+    var(--bar-bck) 0%
+  );
+}
+
+.bar-11 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 10%,
+    var(--calls) 10%,
+    var(--calls) 45%,
+    var(--emails) 45%,
+    var(--emails) 90%,
+    var(--bar-bck) 0%
+  );
+}
+
+.bar-12 {
+  background: linear-gradient(
+    to top,
+    var(--messages) 5%,
+    var(--calls) 5%,
+    var(--calls) 30%,
+    var(--emails) 30%,
+    var(--emails) 93%,
+    #e7ecf2 0%
+  );
+}
+
+.tooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  box-shadow: 0 0 14px 0 #22222224;
+}
+
+.bar-tooltip {
+  opacity: 0;
+  transition: opacity 80ms 160ms linear, left 0.1s linear, right 0.1s linear;
+  background: white;
+  display: grid;
+  grid-template-areas:
+    "stdt stdt stdt stdt stdt"
+    "ed em em ec ec"
+    "cd cl cl cc cc"
+    "md ms ms mc mc";
+  justify-items: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.bar:hover ~ .bar-tooltip {
+  opacity: 1;
+}
+
+.tt-st-dt {
+  grid-area: stdt;
+  margin-bottom: 10px;
+}
+
+.tt-dot {
+  --w: 13px;
+  width: var(--w);
+  height: var(--w);
+  border-radius: 50%;
+  justify-self: start;
+}
+
+.tt-stat-title {
+  font-size: 16px;
+}
+
+.tt-stat-count {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tt-email-dot {
+  background: var(--emails);
+}
+
+.tt-calls-dot {
+  background: var(--calls);
+}
+
+.tt-messages-dot {
+  background: var(--messages);
+}
+
+.tt-emails-txt {
+  grid-area: em;
+  justify-self: start;
+}
+
+.tt-emails-stat-count {
+  grid-area: ec;
+  justify-self: end;
+}
+
+.tt-calls-txt {
+  grid-area: cl;
+  justify-self: start;
+}
+
+.tt-calls-stat-count {
+  grid-area: cc;
+  justify-self: end;
+}
+
+.tt-messages-txt {
+  grid-area: ms;
+  justify-self: start;
+}
+
+.tt-messages-stat-count {
+  grid-area: mc;
+  justify-self: end;
+}
+
+.cur-week {
+  position: relative;
+}
+
+.cur-week:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 40%;
+  display: block;
+  height: 3px;
+  border-radius: 3px;
+  background: #3b29cc;
+
+  animation: curWeekAnim alternate 0.7s linear infinite;
+}
+
+@keyframes curWeekAnim {
+  0% {
+    left: 0;
+    width: 10%;
+  }
+
+  50% {
+    left: 20%;
+    width: 40%;
+  }
+
+  100% {
+    left: 90%;
+    width: 10%;
+  }
+}
