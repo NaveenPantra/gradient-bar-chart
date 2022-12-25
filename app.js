@@ -244,13 +244,15 @@ function handleHoverOnBar(event) {
     tooltipStatCountDom.calls.textContent = calls;
     tooltipStatCountDom.messages.textContent = messages;
     let left = barBoundRect.left + barBoundRect.width + 5;
-    if (barIndex > 6)
+    const maxTop = barBoundRect.y;
+    const minTop = barBoundRect.y + barBoundRect.height - tooltip.clientHeight;
+    if (barIndex > 5)
       left = left - tooltip.clientWidth - barBoundRect.width - 10;
     tooltip.style.setProperty("left", `${left}px`);
-    tooltip.style.setProperty(
-      "top",
-      `${event.clientY - tooltip.clientHeight / 2}px`
-    );
+    let top = event.clientY - tooltip.clientHeight / 2;
+    if (top < maxTop) top = maxTop;
+    if (top > minTop) top = minTop;
+    tooltip.style.setProperty("top", `${top}px`);
     tooltipStatCountDom.dateRange.innerHTML = getFormattedDateForToolTip(
       data[barIndex]
     );
